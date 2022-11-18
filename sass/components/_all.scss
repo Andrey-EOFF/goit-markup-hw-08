@@ -79,14 +79,163 @@ html {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   text-decoration: none;
 
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! N A V I G A T I O N !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.nav {
+  display: flex;
+  margin-left: 93px;
+  padding: 0;
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &__item {
+    position: relative;
+  }
+
+  &__item + &__item {
+    margin-left: 50px;
+  }
+
+  &__link {
+    color: $title-text-color;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+  }
+
+  &__link--current {
+    color: $accent-text-color;
+  }
+}
+
+.nav__link,
+.nav__link--current {
+  // display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__link--current::before {
+  position: absolute;
+  content: '';
+
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+
+  background: #2196f3;
+  border-radius: 2px;
+}
+
+.contact {
+  // display: flex;
+  // align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+
+  &__item + &__item {
+    margin-left: 50px;
+  }
+  &__item {
+    margin: 0 auto;
+  }
+
+  &__link {
+    color: $primary-text-color;
+    fill: $primary-text-color;
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+      fill: $accent-secondary-bg-color;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}
+
+.footer-nav {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  &__link {
+    color: $base-white-color;
+    text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+  }
+
+  &__contact {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+  }
+
+  &__list {
+    display: block;
+
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+
+  &__item:nth-child(-n + 2) {
+    @media screen and (max-width:767px) {
+        margin-bottom: 12px;
+    }
+    
+  }
+}
+
+
 
 
 
@@ -211,7 +360,7 @@ html {
 }
 
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!WORKS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! W O R K S !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .section__works {
 
@@ -289,7 +438,7 @@ html {
 
 
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!TEAM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! T E A M !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .team {
   background-color: $secondary-bg-color;
@@ -397,7 +546,7 @@ html {
 }
 
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CLIENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! C L I E N T S !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .clients-title {
   color: $title-text-color;
@@ -450,7 +599,7 @@ html {
 
 
 
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% F O O T E R %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%$$$$$$$$$$$$$$% F O O T E R %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 .footer {
   background-color: $accent-bg-color;
@@ -469,10 +618,16 @@ html {
 // }
 
 .footer-networks {
+
+
+    @media screen and (max-width:767px) {
+        margin-top: 60px;
+        margin-bottom: 60px;  
+    }
+        
+    
+
 //   margin-left: 70px;
-
-align-items: center;
-
 
   &__title {
     color: $base-white-color;
@@ -526,7 +681,7 @@ align-items: center;
 
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $base-white-color;
@@ -535,6 +690,7 @@ align-items: center;
   &__input {
     // display: inline-block;
 
+    margin-bottom: 20px;
     justify-content: center;
     align-items: center;
     width: 358px;
@@ -561,11 +717,11 @@ align-items: center;
     color: rgba(255, 255, 255, 0.6);
   }
 
-  &__label {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-  }
+//   &__label {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
 
   &__button {
     display: flex;
