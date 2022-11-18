@@ -1,0 +1,450 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    color: $primary-text-color;
+    background-color: $primary-bg-color;
+    font-family: 'Roboto', sans-serif;
+
+  }
+
+
+//   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONTAINER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  .container {
+
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+   width: 480px;
+
+  }
+
+  }
+
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!PAGEHEADER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  .page-header__main {
+//   display: flex;
+//   align-items: center;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $border-pageheader-color;
+}
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!LOGO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.logo {
+//   display: block;
+
+  color: $logo-black-color;
+
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  &__accent {
+    color: $accent-text-color;
+}
+}
+
+.logo-footer {
+  color: $base-white-color;
+
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!HERO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.hero {
+  background-color: $accent-bg-color;
+
+  
+  margin: auto;
+
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  height: 400px;
+  width: 480px;
+  
+  background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/herofon.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__title {
+    color: $base-white-color;
+
+    text-align: center;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.61;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    // width: 696px;
+    margin: 0 auto 30px;
+  }
+}
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!BUTTONHERO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.hero__button {
+  cursor: pointer;
+
+  color: $base-white-color;
+  background-color: $accent-secondary-bg-color;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin: 0 auto;
+  border: none;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $button-bg-active;
+  }
+}
+
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!FEATURE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.features {
+//   display: flex;
+  padding: 0;
+  margin: 0;
+
+  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+    }
+}
+//   gap: 30px;
+//   &__item {
+//     flex-basis: calc((100% - 90px) / 4);
+//   }
+
+  &__block {
+    margin-bottom: 30px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $secondary-bg-color;
+  }
+
+  &__title {
+    color: $title-text-color;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: start;
+    text-align: center;
+
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!WORKS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.section__works {
+
+    
+        display: none;
+
+  padding-top: 0;
+}
+
+.works__title {
+  color: $title-text-color;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.works-list {
+  display: flex;
+
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &__item {
+    width: 370px;
+    position: relative;
+  }
+  &__img {
+    display: block;
+  }
+  &__item + &__item {
+    margin-left: 30px;
+  }
+  &__block {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    position: absolute;
+    width: 100%;
+    height: 70px;
+
+    bottom: 0;
+
+    background: rgba(47, 48, 58, 0.8);
+  }
+  &__text {
+
+
+    margin: 0;
+    // padding-top: 27px;
+    // padding-bottom: 27px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $base-white-color;
+  }
+}
+
+
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!TEAM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.team {
+  background-color: $secondary-bg-color;
+
+  &__title {
+    color: $title-text-color;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.team-list {
+//   display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  &__item {
+
+    background-color: $base-white-bg-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+    }
+  }
+//   &__item + &__item {
+//     margin-left: 30px;
+//   }
+
+  &__description {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__user {
+    color: $title-text-color;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &__major {
+
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    margin-bottom: 16px;
+  }
+  &__photo {
+    width: 100%;
+    display: block;
+    
+  }
+}
+
+.social-networks {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+
+  &__item {
+    background-color: $base-white-bg-color;
+  }
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: $base-white-bg-color;
+    fill: $icon-fill-color;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      fill: $base-white-color;
+      background-color: $accent-secondary-bg-color;
+    }
+  }
+}
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CLIENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.clients-title {
+  color: $title-text-color;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.company-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+//   margin: 0;
+  padding: 0;
+
+  margin: -15px;
+//   gap: 30px;
+
+  &__item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+ 
+  &__link {
+    display: flex;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4%;
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background-color: $base-white-bg-color;
+    fill: $icon-fill-color;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      fill: $accent-secondary-bg-color;
+      border: 1px solid $accent-text-color;
+    }
+  }
+}
+
