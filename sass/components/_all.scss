@@ -18,7 +18,14 @@ html {
 
     @media screen and (min-width: 480px) {
       width: 480px;
+  }
 
+    @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+    @media screen and (min-width: 1200px) {
+    width: 1600px;
   }
   }
 
@@ -33,14 +40,15 @@ html {
   margin-left: auto;
   margin-right: auto;
 
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
   }
 
 
 .section {
-
   padding-top: 94px;
   padding-bottom: 94px;
-
 
 }
 
@@ -48,16 +56,23 @@ html {
 
   .page-header__main {
 
-  // display: flex;
- 
-//   align-items: center;
-  height: 60px;
+    @media screen and (min-width:768px) {
+      display: flex;
+      align-items: center;
 
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: $border-pageheader-color;
-}
+      height: 80px;
 
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: $border-pageheader-color;
+
+
+      &.page-header__menu {
+        display: none;
+      }
+    }
+  }
+  
 .page-header {
   position: relative;
 }
@@ -66,7 +81,7 @@ html {
 
 .logo {
 
-  // display: block;
+  display: block;
 
   color: $logo-black-color;
 
@@ -112,6 +127,11 @@ html {
 
 
 .page-header__menu {
+
+  @media screen and (min-width:768px) {
+    display: none;
+  }
+
   display: inline-flex;
   margin: 0;
   padding:0 ;
@@ -145,7 +165,7 @@ html {
   padding: 20px;
   text-align: center;
   font-size: 20px;
-
+  
   &.is-open {
     display: block;
   }
@@ -157,10 +177,14 @@ html {
 
 .nav {
 
-
  display: none;
-  // display: flex;
-  // margin-left: 93px;
+
+ @media screen and (min-width:768px) {
+  
+  display: flex;
+  margin-left: 93px;
+ }
+  
   padding: 0;
 
   margin-top: 0;
@@ -171,9 +195,9 @@ html {
     position: relative;
   }
 
-  // &__item + &__item {
-  //   margin-left: 50px;
-  // }
+  &__item + &__item {
+    margin-left: 50px;
+  }
 
   &__link {
     color: $title-text-color;
@@ -197,38 +221,42 @@ html {
 
 .nav__link,
 .nav__link--current {
-  // display: block;
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-// .nav__link--current::before {
-//   position: absolute;
-//   content: '';
+.nav__link--current::before {
+  position: absolute;
+  content: '';
 
-//   bottom: 0;
-//   width: 100%;
-//   height: 4px;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
 
-//   background: #2196f3;
-//   border-radius: 2px;
-// }
+  background: #2196f3;
+  border-radius: 2px;
+}
 
 .contact {
   display: none;
-  // display: flex;
-  // align-items: center;
+
+  @media screen and (min-width:768px) {
+    
+  align-items: center;
+  display: block;
   padding: 0;
   margin: 0;
   margin-left: auto;
 
-  &__item + &__item {
-    margin-left: 50px;
-  }
   &__item {
     margin: 0 auto;
+  }
+
+  &__item:nth-child(1) {
+    margin-bottom: 10px;
   }
 
   &__link {
@@ -238,8 +266,8 @@ html {
     align-items: center;
 
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.02em;
     text-decoration: none;
 
@@ -255,6 +283,28 @@ html {
   &__icon {
     margin-right: 10px;
   }
+  }
+
+  @media screen and (min-width:1200px) {
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+
+    &__item:nth-child(1) {
+      margin-bottom: 0px;
+    }
+   
+    &__item + &__item {
+      margin-left: 40px;
+    }
+    }
+  
 }
 
 .footer-nav {
@@ -313,7 +363,6 @@ html {
 .hero {
   background-color: $accent-bg-color;
 
-  
   margin: auto;
 
   padding-top: 118px;
@@ -321,11 +370,16 @@ html {
 
   height: 400px;
   // width: 480px;
-  
   background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/herofon.jpg);
   background-position: center;
   background-repeat: no-repeat;
+
+  @media screen and (min-width:1200px) {
+    height: 600px;
+    padding-top: 200px;
+  padding-bottom: 200px;
+  }
 
   &__title {
     color: $base-white-color;
@@ -338,6 +392,16 @@ html {
     text-transform: uppercase;
     // width: 696px;
     margin: 0 auto 30px;
+
+    @media screen and (min-width:1200px) { 
+
+      text-align: center;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+    }
   }
 }
 
@@ -836,4 +900,3 @@ html {
     fill: $base-white-color;
   }
 }
-
