@@ -13,8 +13,14 @@ html {
     background-color: $primary-bg-color;
     font-family: 'Roboto', sans-serif;
 
-  }
+    margin-right: auto;
+    margin-left: auto;
 
+    @media screen and (min-width: 480px) {
+      width: 480px;
+
+  }
+  }
 
 //   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONTAINER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -27,36 +33,40 @@ html {
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 480px) {
-   width: 480px;
-
-  }
-
   }
 
 
 .section {
+
   padding-top: 94px;
   padding-bottom: 94px;
+
 
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!PAGEHEADER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   .page-header__main {
-//   display: flex;
+
+  // display: flex;
+ 
 //   align-items: center;
+  height: 60px;
 
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: $border-pageheader-color;
 }
 
+.page-header {
+  position: relative;
+}
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!LOGO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .logo {
-//   display: block;
+
+  // display: block;
 
   color: $logo-black-color;
 
@@ -89,23 +99,81 @@ html {
 }
 
 
+
+
+.mobile-menu {
+
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+
+.page-header__menu {
+  display: inline-flex;
+  margin: 0;
+  padding:0 ;
+  border: none;
+  background-color: transparent;
+
+}
+
+.page-header__menu .icon-cross {
+  display: none;
+}
+.page-header__menu.is-open .icon-cross{
+  display: block;
+}
+
+.page-header__menu.is-open .icon-menu{
+  display: none;
+}
+
+.menu-container {
+
+  display: none;
+  
+  position: absolute;
+  top: 100%;
+  width: 100%;
+
+  height: 400px;
+
+  background-color: aqua;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+
+
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! N A V I G A T I O N !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .nav {
-  display: flex;
-  margin-left: 93px;
+
+
+ display: none;
+  // display: flex;
+  // margin-left: 93px;
   padding: 0;
 
   margin-top: 0;
   margin-bottom: 0;
 
   &__item {
+   
     position: relative;
   }
 
-  &__item + &__item {
-    margin-left: 50px;
-  }
+  // &__item + &__item {
+  //   margin-left: 50px;
+  // }
 
   &__link {
     color: $title-text-color;
@@ -136,19 +204,20 @@ html {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav__link--current::before {
-  position: absolute;
-  content: '';
+// .nav__link--current::before {
+//   position: absolute;
+//   content: '';
 
-  bottom: 0;
-  width: 100%;
-  height: 4px;
+//   bottom: 0;
+//   width: 100%;
+//   height: 4px;
 
-  background: #2196f3;
-  border-radius: 2px;
-}
+//   background: #2196f3;
+//   border-radius: 2px;
+// }
 
 .contact {
+  display: none;
   // display: flex;
   // align-items: center;
   padding: 0;
@@ -251,7 +320,7 @@ html {
   padding-bottom: 118px;
 
   height: 400px;
-  width: 480px;
+  // width: 480px;
   
   background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/herofon.jpg);
@@ -362,11 +431,15 @@ html {
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! W O R K S !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+
+
+
 .section__works {
 
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
     
-        display: none;
-
   padding-top: 0;
 }
 
@@ -609,6 +682,7 @@ html {
   margin: auto;
 
   text-align: center;
+
 }
 
 // .footer-general {
