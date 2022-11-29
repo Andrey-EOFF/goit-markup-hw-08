@@ -441,19 +441,53 @@ html {
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!FEATURE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .features {
-//   display: flex;
+
   padding: 0;
   margin: 0;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      padding: 0;
+      margin: -15px;
+
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+
+    }
+
+
+
+    &__item {
+      @media screen and (min-width: 768px) {
+
+          width: calc((100% - 4 * 15px) / 2);
+          margin: 15px;
+        
+      }
+
+      @media screen and (min-width: 1200px) {
+     
+        margin: 0;
+        width: calc((100% - 90px) / 4);
+  
+      }
+
+    }
 
   &__item:not(:last-child) {
     @media screen and (max-width: 767px) {
             margin-bottom: 30px;
     }
 }
-//   gap: 30px;
-//   &__item {
-//     flex-basis: calc((100% - 90px) / 4);
-//   }
+
 
   &__block {
     margin-bottom: 30px;
@@ -473,12 +507,15 @@ html {
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    text-align: start;
     text-align: center;
 
     padding: 0;
     margin-top: 0;
     margin-bottom: 10px;
+
+    @media screen and (min-width: 768px) {
+      text-align: start;
+    }
 
   }
 
@@ -496,15 +533,14 @@ html {
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! W O R K S !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-
-
 .section__works {
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1200px) {
     display: none;
   }
     
   padding-top: 0;
+
 }
 
 .works__title {
@@ -556,8 +592,6 @@ html {
 
 
     margin: 0;
-    // padding-top: 27px;
-    // padding-bottom: 27px;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -580,6 +614,8 @@ html {
 .team {
   background-color: $secondary-bg-color;
 
+
+
   &__title {
     color: $title-text-color;
 
@@ -595,10 +631,50 @@ html {
 }
 
 .team-list {
-//   display: flex;
 
   margin: 0;
   padding: 0;
+
+@media screen and (min-width: 768px) {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  padding: 0;
+  margin: -15px;
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+  @media screen and (min-width: 1200px) {
+    &__item + &__item {
+    margin-left: 30px;
+  }
+ }
+
+
+
+&__item {
+  @media screen and (min-width: 768px) {
+
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+  }
+
+  &__item + &__item {
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+    }
+  }
+
+}
+
 
   &__item {
 
@@ -613,9 +689,9 @@ html {
             margin-bottom: 30px;
     }
   }
-//   &__item + &__item {
-//     margin-left: 30px;
-//   }
+
+  
+
 
   &__description {
     text-align: center;
@@ -648,7 +724,9 @@ html {
     display: block;
     
   }
+
 }
+
 
 .social-networks {
   display: flex;
@@ -699,21 +777,33 @@ html {
 }
 
 .company-list {
+
   display: flex;
   flex-wrap: wrap;
 
   justify-content: center;
-//   margin: 0;
   padding: 0;
-
   margin: -15px;
-//   gap: 30px;
+
 
   &__item {
+
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
-  }
- 
+
+    @media screen and (min-width: 768px) {
+
+      width: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+
+      width: calc((100% - 12 * 15px) / 6);
+    margin: 15px;
+    }
+    }
+
   &__link {
     display: flex;
     height: 92px;
