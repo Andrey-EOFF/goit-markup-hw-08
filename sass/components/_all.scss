@@ -50,6 +50,13 @@ html {
   padding-top: 94px;
   padding-bottom: 94px;
 
+  @media screen and (max-width:1199px) {
+
+    padding-top: 60px;
+  padding-bottom: 60px;
+
+  }
+
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!PAGEHEADER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -114,7 +121,7 @@ html {
 }
 
 
-
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! M E N U M O B I L E !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .mobile-menu {
 
@@ -353,8 +360,6 @@ html {
     
   }
 }
-
-
 
 
 
@@ -627,38 +632,37 @@ html {
 
     margin-top: 0;
     margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px){
+      font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    }
+
+
   }
 }
 
 .team-list {
 
-  margin: 0;
-  padding: 0;
-
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
   display: flex;
   flex-wrap: wrap;
 
   justify-content: center;
   padding: 0;
   margin: -15px;
-
-}
-
-@media screen and (min-width: 1200px) {
-
-  display: flex;
-  margin: 0;
-  padding: 0;
 }
 
   @media screen and (min-width: 1200px) {
-    &__item + &__item {
-    margin-left: 30px;
-  }
- }
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
 
-
+}
 
 &__item {
   @media screen and (min-width: 768px) {
@@ -667,13 +671,18 @@ html {
       margin: 15px;
   }
 
-  &__item + &__item {
-    @media screen and (min-width: 1200px) {
-      margin-left: 30px;
-    }
-  }
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+}
 
 }
+
+&__item + &__item {
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
+      
+    }
 
 
   &__item {
@@ -774,6 +783,14 @@ html {
 
   margin-top: 0;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  }
 }
 
 .company-list {
@@ -839,11 +856,20 @@ html {
 
 }
 
-// .footer-general {
-//   display: flex;
-//   margin-right: 0;
-//   align-items: baseline;
-// }
+@media screen and (min-width: 768px) {
+
+  .footer-general {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: 0;
+}
+
+.footer-navigation {
+  margin-bottom: 60px;
+}
+}
+
 
 .footer-networks {
 
@@ -853,9 +879,11 @@ html {
         margin-bottom: 60px;  
     }
         
-    
+    @media screen and (min-width:1200px) {
+      margin-left: 70px;
+  }
 
-//   margin-left: 70px;
+
 
   &__title {
     color: $base-white-color;
@@ -901,7 +929,11 @@ html {
 }
 
 .footer-form {
-//   margin-left: 93px;
+
+  @media screen and (min-width:1200px) {
+    margin-left: 93px;
+  }
+
 
   &__title {
     margin-top: 0;
@@ -916,7 +948,10 @@ html {
   }
 
   &__input {
-    // display: inline-block;
+    @media screen and (min-width:1200px) {
+      display: inline-block;
+    }
+    
 
     margin-bottom: 20px;
     justify-content: center;
@@ -934,7 +969,11 @@ html {
   }
 
   &__input::placeholder {
-    // display: flex;
+
+    @media screen and (min-width:1200px) {
+      display: flex;
+    }
+
     align-items: center;
 
     font-weight: 400;
@@ -945,11 +984,15 @@ html {
     color: rgba(255, 255, 255, 0.6);
   }
 
-//   &__label {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
+
+  &__label {
+  @media screen and (min-width:1200px) {
+    display: flex;
+    justify-content: center;
+    
+  }
+}
+
 
   &__button {
     display: flex;
@@ -983,6 +1026,11 @@ html {
       background-color: $button-bg-active;
       background-origin: padding-box;
     }
+
+    @media screen and (min-width:1200px) {
+      margin-left: 12px;
+    }
+
   }
 
   &__icon {
