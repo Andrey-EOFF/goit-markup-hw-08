@@ -1,37 +1,37 @@
 html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  
-  body {
-    color: $primary-text-color;
-    background-color: $primary-bg-color;
-    font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
 
-    margin-right: auto;
-    margin-left: auto;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-    @media screen and (min-width: 480px) {
-      width: 480px;
+body {
+  color: $primary-text-color;
+  background-color: $primary-bg-color;
+  font-family: 'Roboto', sans-serif;
+
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    position: relative;
   }
 
-    @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 768px;
   }
 
-    @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     width: 1600px;
   }
-  }
+}
 
 //   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONTAINER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-  .container {
+.container {
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 15px;
@@ -42,30 +42,26 @@ html {
   @media screen and (min-width: 1200px) {
     width: 1200px;
   }
-  }
-
+}
 
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 
-  @media screen and (max-width:1199px) {
-
+  @media screen and (max-width: 1199px) {
     padding-top: 60px;
-  padding-bottom: 60px;
-
+    padding-bottom: 60px;
   }
-
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!PAGEHEADER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-  .page-header__main {
-
-    @media screen and (min-width:768px) {
+.page-header {
+  &__main {
+    @media screen and (min-width: 768px) {
       display: flex;
       align-items: center;
-      
+      justify-content: space-between;
 
       height: 80px;
 
@@ -73,21 +69,15 @@ html {
       border-bottom-style: solid;
       border-bottom-color: $border-pageheader-color;
 
-
       &.page-header__menu {
         display: none;
       }
     }
   }
-  
-.page-header {
-  position: relative;
 }
-
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!LOGO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .logo {
-
   display: block;
 
   color: $logo-black-color;
@@ -102,7 +92,7 @@ html {
 
   &__accent {
     color: $accent-text-color;
-}
+  }
 }
 
 .logo-footer {
@@ -120,53 +110,61 @@ html {
   margin-bottom: 28px;
 }
 
-
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! M E N U M O B I L E !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-.mobile-menu {
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
 
-    
+.navigations-all {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  
 }
 
 
-.page-header__menu {
 
-  @media screen and (min-width:768px) {
+
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.menu-button {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 
   display: inline-flex;
   margin: 0;
-  padding:0 ;
+  padding: 0;
   border: none;
   background-color: transparent;
-
 }
 
-.page-header__menu .icon-cross {
+.menu-button .icon-cross {
   display: none;
 }
-.page-header__menu.is-open .icon-cross{
+.menu-button.is-open .icon-cross {
   display: block;
 }
 
-.page-header__menu.is-open .icon-menu{
+.menu-button.is-open .icon-menu {
   display: none;
 }
 
 .menu-container {
+  @media screen and (max-width: 767px) {
+    background: white;
+    background: rgb(133, 102, 102);
+    padding: 40px;
+  }
 
   @media screen and (min-width: 768px) {
-  
-  display: flex;
- justify-content: space-between;
-  align-items: center;
-  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &.is-open {
     display: block;
@@ -176,59 +174,83 @@ html {
     display: none;
 
     position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
+    top: 0;
+    left: 0;
+    width: 480px;
+    height: 100%;
   }
-
-
 }
-
-
-
-
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! N A V I G A T I O N !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
 .navigation {
-  @media screen and (min-width:768px) {
-  
+  @media screen and (min-width: 768px) {
     display: flex;
     margin-left: 93px;
   }
 }
 
 .nav {
+  @media screen and (min-width: 768px) {
+    list-style: none;
+    display: flex;
+  }
 
- @media screen and (min-width:768px) {
-  
-  display: flex;
-  
-}
-  
   padding: 0;
 
   margin-top: 0;
   margin-bottom: 0;
 
   &__item {
-   
-    position: relative;
+    padding: 0;
+    @media screen and (max-width: 767px) {
+      list-style: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      position: relative;
+    }
+  }
+
+  &__item:nth-child(-n + 2) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__item:nth-child(3) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 306px;
+    }
   }
 
   &__item + &__item {
-    margin-left: 50px;
+    @media screen and (min-width: 768px) {
+      margin-left: 50px;
+    }
   }
 
   &__link {
-    color: $title-text-color;
+    @media screen and (min-width: 480px) {
+      color: #212121;
+      padding: 0;
 
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-decoration: none;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+    }
+
+    @media screen and (min-width: 768px) {
+      color: $title-text-color;
+
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
 
     &:hover,
     &:focus {
@@ -243,78 +265,116 @@ html {
 
 .nav__link,
 .nav__link--current {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .nav__link--current::before {
-  position: absolute;
-  content: '';
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    content: '';
 
-  bottom: 0;
-  width: 100%;
-  height: 4px;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
 
-  background: #2196f3;
-  border-radius: 2px;
-}
-
-.contacts {
-  @media screen and (min-width:768px) {
-    display: block;
-    align-items: center;
-    
-
+    background: #2196f3;
+    border-radius: 2px;
   }
 }
+
+// .contacts {
+//   @media screen and (min-width:768px) {
+
+//     margin-left: auto;
+//     display: flex;
+//     align-items: center;
+
+//   }
+// }
 .contact {
-  @media screen and (min-width:768px) {
+  @media screen and (max-width: 767px) {
+    padding: 0;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
     display: block;
-  margin: auto;
-  justify-content: space-between;
-  align-items: center;
-  
-  padding: 0;
-  
 
-  &__item {
-    margin: 0 auto;
-  }
-
-  &__item:nth-child(1) {
-    margin-bottom: 10px;
-  }
-
-  &__link {
-    color: $primary-text-color;
-    fill: $primary-text-color;
-    display: flex;
+    justify-content: space-between;
     align-items: center;
 
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.02em;
-    text-decoration: none;
+    padding: 0;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &__item {
+      @media screen and (max-width: 767px) {
+        text-decoration: none;
 
-    &:hover,
-    &:focus {
-      color: $accent-text-color;
-      fill: $accent-secondary-bg-color;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.17;
+
+        letter-spacing: 0.02em;
+
+        color: #2196f3;
+      }
+    }
+
+    &__item:nth-child(1) {
+      margin-bottom: 10px;
+    }
+
+    &__link {
+      @media screen and (max-width: 767px) {
+        text-decoration: none;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.17;
+
+        letter-spacing: 0.02em;
+
+        color: #2196f3;
+      }
+
+      @media screen and (min-width: 768px) {
+        color: $primary-text-color;
+        fill: $primary-text-color;
+        display: flex;
+        align-items: center;
+
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      &:hover,
+      &:focus {
+        color: $accent-text-color;
+        fill: $accent-secondary-bg-color;
+      }
+    }
+
+    &__icon {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+      margin-right: 10px;
     }
   }
 
-  &__icon {
-    margin-right: 10px;
-  }
-  }
-
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
 
@@ -324,17 +384,17 @@ html {
     letter-spacing: 0.02em;
     text-decoration: none;
 
-
     &__item:nth-child(1) {
       margin-bottom: 0px;
     }
-   
+
     &__item + &__item {
       margin-left: 40px;
     }
-    }
-  
+  }
 }
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! F O O T E R N A V I G A T I O N !!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .footer-nav {
   font-style: normal;
@@ -376,14 +436,11 @@ html {
   }
 
   &__item:nth-child(-n + 2) {
-    @media screen and (max-width:767px) {
-        margin-bottom: 12px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 12px;
     }
-    
   }
 }
-
-
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!HERO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -402,10 +459,10 @@ html {
   background-position: center;
   background-repeat: no-repeat;
 
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     height: 600px;
     padding-top: 200px;
-  padding-bottom: 200px;
+    padding-bottom: 200px;
   }
 
   &__title {
@@ -420,18 +477,16 @@ html {
     // width: 696px;
     margin: 0 auto 30px;
 
-    @media screen and (min-width:1200px) { 
-
+    @media screen and (min-width: 1200px) {
       text-align: center;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 1.36;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
   }
 }
-
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!BUTTONHERO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -463,58 +518,45 @@ html {
   }
 }
 
-
-
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!FEATURE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .features {
-
   padding: 0;
   margin: 0;
 
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    padding: 0;
+    margin: -15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+  }
+
+  &__item {
     @media screen and (min-width: 768px) {
-      display: flex;
-      flex-wrap: wrap;
-
-      justify-content: center;
-      padding: 0;
-      margin: -15px;
-
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
     }
 
     @media screen and (min-width: 1200px) {
-      display: flex;
-  padding: 0;
-  margin: 0;
-  gap: 30px;
-
+      margin: 0;
+      width: calc((100% - 90px) / 4);
     }
-
-
-
-    &__item {
-      @media screen and (min-width: 768px) {
-
-          width: calc((100% - 4 * 15px) / 2);
-          margin: 15px;
-        
-      }
-
-      @media screen and (min-width: 1200px) {
-     
-        margin: 0;
-        width: calc((100% - 90px) / 4);
-  
-      }
-
-    }
+  }
 
   &__item:not(:last-child) {
     @media screen and (max-width: 767px) {
-            margin-bottom: 30px;
+      margin-bottom: 30px;
     }
-}
-
+  }
 
   &__block {
     margin-bottom: 30px;
@@ -543,7 +585,6 @@ html {
     @media screen and (min-width: 768px) {
       text-align: start;
     }
-
   }
 
   &__text {
@@ -556,18 +597,14 @@ html {
   }
 }
 
-
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! W O R K S !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
 .section__works {
-
   @media screen and (max-width: 1200px) {
     display: none;
   }
-    
-  padding-top: 0;
 
+  padding-top: 0;
 }
 
 .works__title {
@@ -601,11 +638,9 @@ html {
     margin-left: 30px;
   }
   &__block {
-
     display: flex;
     justify-content: center;
     align-items: center;
-
 
     position: absolute;
     width: 100%;
@@ -616,8 +651,6 @@ html {
     background: rgba(47, 48, 58, 0.8);
   }
   &__text {
-
-
     margin: 0;
 
     font-family: 'Roboto';
@@ -633,15 +666,10 @@ html {
   }
 }
 
-
-
-
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! T E A M !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .team {
   background-color: $secondary-bg-color;
-
-
 
   &__title {
     color: $title-text-color;
@@ -655,65 +683,55 @@ html {
     margin-top: 0;
     margin-bottom: 30px;
 
-    @media screen and (min-width: 1200px){
+    @media screen and (min-width: 1200px) {
       font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
+      font-size: 36px;
+      line-height: 1.16;
+      text-align: center;
+      letter-spacing: 0.03em;
     }
-
-
   }
 }
 
 .team-list {
-
   display: block;
   margin: 0;
   padding: 0;
 
   @media screen and (min-width: 768px) {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 
-  justify-content: center;
-  padding: 0;
-  margin: -15px;
-}
-
-  @media screen and (min-width: 1200px) {
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 0;
-  padding: 0;
-
-}
-
-&__item {
-  
-  @media screen and (min-width: 768px) {
-
-      width: calc((100% - 4 * 15px) / 2);
-      margin: 15px;
+    justify-content: center;
+    padding: 0;
+    margin: -15px;
   }
 
   @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
     margin: 0;
-}
-
-}
-
-&__item + &__item {
-  @media screen and (min-width: 1200px) {
-    margin-left: 30px;
+    padding: 0;
   }
-      
-    }
-
 
   &__item {
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
 
+    @media screen and (min-width: 1200px) {
+      margin: 0;
+    }
+  }
+
+  &__item + &__item {
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+    }
+  }
+
+  &__item {
     background-color: $base-white-bg-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -722,12 +740,9 @@ html {
 
   &__item:not(:last-child) {
     @media screen and (max-width: 767px) {
-            margin-bottom: 30px;
+      margin-bottom: 30px;
     }
   }
-
-  
-
 
   &__description {
     text-align: center;
@@ -748,7 +763,6 @@ html {
   }
 
   &__major {
-
     margin: 0;
     font-size: 16px;
     line-height: 1.18;
@@ -758,11 +772,8 @@ html {
   &__photo {
     width: 100%;
     display: block;
-    
   }
-
 }
-
 
 .social-networks {
   display: flex;
@@ -796,7 +807,6 @@ html {
   }
 }
 
-
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! C L I E N T S !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .clients-title {
@@ -813,15 +823,14 @@ html {
 
   @media screen and (min-width: 1200px) {
     font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
   }
 }
 
 .company-list {
-
   display: flex;
   flex-wrap: wrap;
 
@@ -829,24 +838,20 @@ html {
   padding: 0;
   margin: -15px;
 
-
   &__item {
-
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
 
     @media screen and (min-width: 768px) {
-
       width: calc((100% - 6 * 15px) / 3);
-    margin: 15px;
+      margin: 15px;
     }
 
     @media screen and (min-width: 1200px) {
-
       width: calc((100% - 12 * 15px) / 6);
-    margin: 15px;
+      margin: 15px;
     }
-    }
+  }
 
   &__link {
     display: flex;
@@ -868,49 +873,40 @@ html {
   }
 }
 
-
-
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%$$$$$$$$$$$$$$% F O O T E R %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 .footer {
   background-color: $accent-bg-color;
   padding-top: 60px;
   padding-bottom: 60px;
-//   width: 1600px;
+  //   width: 1600px;
   margin: auto;
 
   text-align: center;
-
 }
 
 @media screen and (min-width: 768px) {
-
   .footer-general {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-right: 0;
-}
-
-.footer-navigation {
-  margin-bottom: 60px;
-}
-}
-
-
-.footer-networks {
-
-
-    @media screen and (max-width:767px) {
-        margin-top: 60px;
-        margin-bottom: 60px;  
-    }
-        
-    @media screen and (min-width:1200px) {
-      margin-left: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-right: 0;
   }
 
+  .footer-navigation {
+    margin-bottom: 60px;
+  }
+}
 
+.footer-networks {
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 
   &__title {
     color: $base-white-color;
@@ -956,11 +952,9 @@ html {
 }
 
 .footer-form {
-
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     margin-left: 93px;
   }
-
 
   &__title {
     margin-top: 0;
@@ -973,17 +967,15 @@ html {
     text-transform: uppercase;
     color: $base-white-color;
 
-      @media screen and (min-width:1200px) {
-        text-align: start;
-      }
-
+    @media screen and (min-width: 1200px) {
+      text-align: start;
+    }
   }
 
   &__input {
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: 1200px) {
       display: inline-block;
     }
-    
 
     margin-bottom: 20px;
     justify-content: center;
@@ -1001,8 +993,7 @@ html {
   }
 
   &__input::placeholder {
-
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: 1200px) {
       display: flex;
     }
 
@@ -1016,15 +1007,12 @@ html {
     color: rgba(255, 255, 255, 0.6);
   }
 
-
   &__label {
-  @media screen and (min-width:1200px) {
-    display: flex;
-    justify-content: center;
-    
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: center;
+    }
   }
-}
-
 
   &__button {
     display: flex;
@@ -1059,10 +1047,9 @@ html {
       background-origin: padding-box;
     }
 
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: 1200px) {
       margin-left: 12px;
     }
-
   }
 
   &__icon {
