@@ -4,6 +4,12 @@ ul {
   list-style: none;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -931,12 +937,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
-    text-align: center;
-    font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
   }
 }
 
@@ -1352,13 +1354,15 @@ body {
         justify-content: space-around;
     margin-right: 0;
   }
+}
+@media screen and (max-width: 1199px) {
   .footer-navigation {
     margin-bottom: 60px;
   }
 }
+
 @media screen and (max-width: 767px) {
   .footer-networks {
-    margin-top: 60px;
     margin-bottom: 60px;
   }
 }

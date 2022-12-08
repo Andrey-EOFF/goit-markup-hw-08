@@ -19,95 +19,79 @@
   <body>
     <!--Header nav + cont.-->
 
-    
     <header class="page-header">
       <div class="container page-header__main">
+        <a href="./index.html" class="logo"><span class="logo__accent">Web</span>Studio</a>
 
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg
+            class="menu-toggle__img-menu"
+            width="40px"
+            height="40px"
+            aria-label="переключатель мобильного меню"
+          >
+            <use class="icon-menu" href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
 
-            <a href="./index.html" class="logo"><span class="logo__accent">Web</span>Studio</a>
-
-            
-            <button
-          class="menu-toggle js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-              <svg class="menu-toggle__img-menu" width="40px" height="40px" aria-label="переключатель мобильного меню"> 
-                <use class="icon-menu" href="./images/icons.svg#icon-menu_40px"></use>
-               
-              </svg>
-            </button>
-       
-          <div class="menu-container js-menu-container" id="mobile-menu">
-              
-            <button
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button
             class="menu-toggle js-close-menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
           >
-              <svg class="menu-toggle__img-menu" width="40px" height="40px" aria-label="переключатель мобильного меню"> 
-                
-                <use class="icon-cross" href="./images/icons.svg#icon-close_40px"></use>
-              </svg>
-            </button>
+            <svg
+              class="menu-toggle__img-menu"
+              width="40px"
+              height="40px"
+              aria-label="переключатель мобильного меню"
+            >
+              <use class="icon-cross" href="./images/icons.svg#icon-close_40px"></use>
+            </svg>
+          </button>
 
+          <nav class="navigations-all">
+            <ul class="nav">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link nav__link--current">Студія</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link">Портфоліо</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
 
-            
+          <ul class="contact">
+            <li class="contact__item">
+              <a class="contact__link" href="mailto:info@devstudio.com"
+                ><svg width="16px" height="12px" class="contact__icon">
+                  <use href="./images/icons.svg#icon-mail"></use></svg
+                >info@devstudio.com</a
+              >
+            </li>
 
-              <nav class="navigations-all">
-                <ul class="nav">
-                  <li class="nav__item">
-                    <a href="./index.html" class="nav__link nav__link--current">Студія</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="./portfolio.html" class="nav__link">Портфоліо</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">Контакти</a>
-                  </li>
-                </ul>
+            <li class="contact__item">
+              <a class="contact__link mobile-accent" href="tell:+380961111111">
+                <svg width="10" height="16" class="contact__icon">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
 
-              
-              </nav>
-        
-              
-              <ul class="contact">
-                <li class="contact__item">
-                  <a class="contact__link" href="mailto:info@devstudio.com"
-                    ><svg width="16px" height="12px" class="contact__icon">
-                      <use href="./images/icons.svg#icon-mail"></use></svg
-                    >info@devstudio.com</a
-                  >
-                </li>
-      
-                <li class="contact__item">
-                  <a class="contact__link mobile-accent" href="tell:+380961111111">
-                    <svg width="10" height="16" class="contact__icon">
-                      <use href="./images/icons.svg#icon-smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11</a
-                  >
-                </li>
-              </ul>
-
-              <ul class="social">
-                <li class="social__item"><a href="" class="social__networks">Instagram</a></li>
-                <li class="social__item"><a href="" class="social__networks">Twitter</a></li>
-                <li class="social__item"><a href="" class="social__networks">Facebook</a></li>
-                <li class="social__item"><a href="" class="social__networks">LinkedIn</a></li>
-              </ul>
-            
-
-            
-
-
-            
+          <ul class="social">
+            <li class="social__item"><a href="" class="social__networks">Instagram</a></li>
+            <li class="social__item"><a href="" class="social__networks">Twitter</a></li>
+            <li class="social__item"><a href="" class="social__networks">Facebook</a></li>
+            <li class="social__item"><a href="" class="social__networks">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
-
-
     </header>
-
-
 
     <main>
       <!--Герой банер с заголовком-->
@@ -131,7 +115,7 @@
               <p class="modal-form__title">Залиште свої дані, ми вам передзвонимо</p>
 
               <div class="modal-form__field">
-                <label class="modal-form__label" for="name"
+                <label class="modal-form__label"
                   >Ім'я
 
                   <input class="modal-form__input" type="text" name="name" />
@@ -593,14 +577,13 @@
       </div>
     </footer>
 
+    <script src="./js/modal.js"></script>
     <script
-    defer
-    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-    crossorigin="anonymous"
-  ></script>
-  <script defer src="js/mobile-menu.js"></script>
-
-
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

@@ -9,7 +9,6 @@ html {
 }
 
 body {
-  
   color: $primary-text-color;
   background-color: $primary-bg-color;
   font-family: 'Roboto', sans-serif;
@@ -93,8 +92,6 @@ body {
 // !!!!!!!!!!!!!!!!!!!!!!!!!!PAGEHEADER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .page-header {
-  
-
   &__main {
     display: flex;
     align-items: center;
@@ -108,7 +105,6 @@ body {
 
     @media screen and (min-width: 768px) {
       height: 80px;
-      
     }
   }
 }
@@ -149,19 +145,14 @@ body {
 }
 
 .menu-container {
-
-
   @media screen and (max-width: 767px) {
-
     z-index: 999;
     display: none;
 
-    
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    
 
     background-color: #ffff;
     padding: 40px;
@@ -169,7 +160,7 @@ body {
     &.is-open {
       display: block;
       display: flex;
-    flex-direction: column;
+      flex-direction: column;
     }
   }
 
@@ -185,9 +176,7 @@ body {
   position: absolute;
   top: 16px;
   right: 16px;
-
 }
-
 
 .nav {
   @media screen and (max-width: 767px) {
@@ -219,7 +208,6 @@ body {
     &__item:not(:last-child) {
       margin-bottom: 32px;
     }
-    
   }
 
   @media screen and (min-width: 768px) {
@@ -393,15 +381,14 @@ body {
 
     &::after {
       position: absolute;
-    content: '';
+      content: '';
 
-    margin-left: 10px;
-    width: 0;
-    height: 22px;
+      margin-left: 10px;
+      width: 0;
+      height: 22px;
 
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
     }
-
   }
 
   &__networks {
@@ -417,7 +404,6 @@ body {
 
     color: $accent-text-color;
   }
-  
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! F O O T E R N A V I G A T I O N !!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -504,12 +490,8 @@ body {
     margin: 0 auto 30px;
 
     @media screen and (min-width: 1200px) {
-      text-align: center;
-      font-weight: 900;
       font-size: 44px;
       line-height: 1.36;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
     }
   }
 }
@@ -918,15 +900,16 @@ body {
     justify-content: space-around;
     margin-right: 0;
   }
+}
 
-  .footer-navigation {
+.footer-navigation {
+  @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
   }
 }
 
 .footer-networks {
   @media screen and (max-width: 767px) {
-    margin-top: 60px;
     margin-bottom: 60px;
   }
 
