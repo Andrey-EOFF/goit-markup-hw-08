@@ -406,7 +406,7 @@ body {
   }
 }
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! F O O T E R N A V I G A T I O N !!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! N A V I G A T I O N F O O T E R  !!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .footer-nav {
   font-style: normal;
@@ -460,18 +460,47 @@ body {
   background-color: $accent-bg-color;
 
   margin: auto;
-
   padding-top: 118px;
   padding-bottom: 118px;
 
+  max-width: 1600px;
   height: 400px;
-  // width: 480px;
-  background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/herofon.jpg);
+
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+
+  background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/img_mob@1x.jpg);
+
+  @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/img_mob@2x.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/img_tab@1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/img_tab@2x.jpg);
+    }
+  }
 
   @media screen and (min-width: 1200px) {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/img_des@1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/img_des@2x.jpg);
+    }
+
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
