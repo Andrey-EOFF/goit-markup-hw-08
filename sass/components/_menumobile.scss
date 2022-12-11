@@ -65,7 +65,7 @@
 
 .nav {
   margin-top: 0;
-  margin-bottom: 306px;
+  margin-bottom: 265px;
   padding: 0;
 
   &__link {
@@ -95,11 +95,10 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
     &__link--current {
       color: $accent-text-color;
     }
-  }
+  
 
   @media screen and (max-width: 767px) {
     &__item:not(:last-child) {
